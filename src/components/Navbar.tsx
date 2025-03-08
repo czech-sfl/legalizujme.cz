@@ -10,7 +10,7 @@ export default function Navbar() {
     ];
 
     return (
-        <div className="flex justify-center sticky top-0">
+        <div className="flex justify-center sticky top-0 z-10 backdrop-blur-3xl bg-[#ffffffb0]">
             <div className="flex justify-between max-w-6xl p-4">
                 {links.map((link) => (
                     <a

@@ -1,11 +1,19 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { Outfit } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "../components/Navbar";
 
-const montserrat = Montserrat({
-  variable: "--font-montserrat",
+const outfit = Outfit({
+  variable: "--font-outfit",
   subsets: ["latin"],
+  display: "swap",
+});
+
+const burra = localFont({
+  src: "../fonts/burra.ttf",
+  variable: "--font-burra",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -20,9 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="cs">
-      <body
-        className={`${montserrat.variable} antialiased`}
-      >
+      <body className={`${outfit.variable} ${burra.variable} antialiased`}>
         <Navbar />
         {children}
       </body>
