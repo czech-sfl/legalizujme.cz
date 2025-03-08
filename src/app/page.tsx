@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <div className="m-4">
+    <div className="">
       <span>Server is running...</span>
     </div>
   );
